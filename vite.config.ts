@@ -6,6 +6,9 @@ import adonisjs from '@adonisjs/vite/client'
 
 export default defineConfig({
   publicDir: 'public',
+  server: {
+    allowedHosts: ['no-kyc-payment-gateway.onrender.com'],
+  },
   plugins: [
     inertia({ ssr: { enabled: true, entrypoint: 'inertia/app/ssr.tsx' } }),
     react(),
